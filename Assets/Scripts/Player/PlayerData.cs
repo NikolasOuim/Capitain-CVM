@@ -42,6 +42,10 @@ public class PlayerData
     /// </summary>
     private int _score;
     /// <summary>
+    /// Le niveau où est rendu le joueur
+    /// </summary>
+    private int _niveau;
+    /// <summary>
     /// Liste des coffres ouverts dans le jeu
     /// </summary>
     private List<string> _chestOpenList;
@@ -49,6 +53,13 @@ public class PlayerData
     /// Représente le maximum d'énergie du personnage
     /// </summary>
     public const int MAX_ENERGIE = 4;
+
+
+    /// <summary>
+    /// Représente le maximum de niveau
+    /// <summary>
+    public const int MAX_NIVEAU = 3;
+
     /// <summary>
     /// Permet d'identifier les actions sur le UI à réaliser
     /// lors de la perte d'énergie
@@ -67,6 +78,7 @@ public class PlayerData
     public int Energie { get { return this._energie; } }
     public int Vie { get { return this._vie; } }
     public int Score { get { return this._score; } }
+    public int Niveau { get { return this._niveau; } }
     public string[] ListeCoffreOuvert { get { return this._chestOpenList.ToArray(); } }
 
     public PlayerData()
@@ -81,12 +93,13 @@ public class PlayerData
         this.UIPerteVie = null;
         this.Gameover = null;
         this._chestOpenList = new List<string>();
+        this._niveau = 1;
     }
 
     public PlayerData(int vie = 1, int energie = 2, int score = 0,
         float volumeGeneral = 0, float volumeMusique = 0, float volumeEffet = 0,
         System.Action uiPerteEnergie = null, System.Action uiPerteVie = null,
-        System.Action gameOver = null, List<string> ChestList = null)
+        System.Action gameOver = null, List<string> ChestList = null, int niveau = 1)
     {
         this._vie = vie;
         this._energie = energie;
@@ -94,6 +107,7 @@ public class PlayerData
         this._volumeGeneral = volumeGeneral;
         this._volumeMusique = volumeMusique;
         this._volumeEffet = volumeEffet;
+        this._niveau = niveau;
         this.UIPerteEnergie += uiPerteEnergie;
         this.UIPerteVie += uiPerteVie;
         this.Gameover += gameOver;
@@ -165,6 +179,16 @@ public class PlayerData
     public void IncrScore(int gain = 1)
     {
         this._score += gain;
+    }
+
+
+    public void IncrNiveau(int niveau = 1)
+    {
+        this._niveau += niveau;
+        if (this._niveau >= MAX_NIVEAU)
+        {
+            this._niveau = MAX_NIVEAU;
+        }
     }
 
     /// <summary>
