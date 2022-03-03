@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuButtonAction : MonoBehaviour
 {
+    public Button ButtonNiv2;
     /// <summary>
     /// Permet d'afficher un panel transmis en paramètre
     /// </summary>
@@ -11,6 +12,7 @@ public class MainMenuButtonAction : MonoBehaviour
     public void AfficherPanel(GameObject PanelAOuvrir)
     {
         PanelAOuvrir.SetActive(true);
+        ButtonNiv2.interactable = true;
     }
 
     /// <summary>
@@ -30,6 +32,8 @@ public class MainMenuButtonAction : MonoBehaviour
     {
         SceneManager.LoadScene(nom);
     }
+
+
 
     /// <summary>
     /// Permet de fermer l'application

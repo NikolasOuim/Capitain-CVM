@@ -16,6 +16,11 @@ public class FinDeNiveau : MonoBehaviour
             {
                 SceneManager.LoadScene("Level2");
             }
+            //else if (GameManager.Instance.PlayerData.Niveau.Equals(3))
+            //{
+             //   SceneManager.LoadScene("Level3");
+            //}
+            //
             else
             {
                 SceneManager.LoadScene("MainMenu");

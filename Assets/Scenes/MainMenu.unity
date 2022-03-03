@@ -1298,6 +1298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c524a5eeffc10e44da581131365e7e30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ButtonNiv2: {fileID: 1138826157}
 --- !u!1 &462424166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1590,7 +1591,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &593140223
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2813,7 +2814,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1048728323
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3283,7 +3284,7 @@ GameObject:
   - component: {fileID: 1138826157}
   m_Layer: 5
   m_Name: ButtonNiv2
-  m_TagString: Untagged
+  m_TagString: ButtonNiv2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7030,7 +7031,7 @@ PrefabInstance:
     - target: {fileID: 8825697746811437030, guid: 848fc5e9804caa541b89cfc389a4bbca,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 848fc5e9804caa541b89cfc389a4bbca, type: 3}

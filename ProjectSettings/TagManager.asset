@@ -8,6 +8,7 @@ TagManager:
   - Ennemy
   - Plateform
   - Tilemap Water
+  - ButtonNiv2
   layers:
   - Default
   - TransparentFX
