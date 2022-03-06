@@ -41,6 +41,7 @@ public class PlayerData
     /// Représente le score obtenu
     /// </summary>
     private int _score;
+    private int _chapeau;
     /// <summary>
     /// Le niveau où est rendu le joueur
     /// </summary>
@@ -77,6 +78,7 @@ public class PlayerData
 
     public int Energie { get { return this._energie; } }
     public int Vie { get { return this._vie; } }
+    public int Chapeau { get { return this._chapeau; } }
     public int Score { get { return this._score; } }
     public int Niveau { get { return this._niveau; } }
     public string[] ListeCoffreOuvert { get { return this._chestOpenList.ToArray(); } }
@@ -94,15 +96,18 @@ public class PlayerData
         this.Gameover = null;
         this._chestOpenList = new List<string>();
         this._niveau = 1;
+        this._chapeau = 0;
     }
 
     public PlayerData(int vie = 1, int energie = 2, int score = 0,
         float volumeGeneral = 0, float volumeMusique = 0, float volumeEffet = 0,
         System.Action uiPerteEnergie = null, System.Action uiPerteVie = null,
-        System.Action gameOver = null, List<string> ChestList = null, int niveau = 1)
+        System.Action gameOver = null, List<string> ChestList = null, int niveau = 1, 
+        int chapeau = 0)
     {
         this._vie = vie;
         this._energie = energie;
+        this._chapeau = chapeau;
         this._score = score;
         this._volumeGeneral = volumeGeneral;
         this._volumeMusique = volumeMusique;
@@ -170,6 +175,11 @@ public class PlayerData
     {
         this._vie += gain;
         this.UIPerteVie();
+    }
+
+    public void AddChapeau(int quantite)
+    {
+        this._chapeau += quantite;
     }
 
     /// <summary>

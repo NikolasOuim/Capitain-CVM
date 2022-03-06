@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3095764373232002340}
   - component: {fileID: 3095764373232002347}
   - component: {fileID: 3095764373232002346}
-  - component: {fileID: 3095764373232002345}
+  - component: {fileID: -1273768920266630269}
   m_Layer: 0
   m_Name: Chapeau
   m_TagString: Untagged
@@ -109,7 +109,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5468578, y: 1.9573708}
   m_EdgeRadius: 0
---- !u!114 &3095764373232002345
+--- !u!114 &-1273768920266630269
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,7 +118,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 3095764373232002344}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7914e539275c4bf439b695124950ca8a, type: 3}
+  m_Script: {fileID: 11500000, guid: c6883dc690aa63a4a8214ab310ab3466, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gainPoint: 5
+  _chapeau: 1
+  _clip: {fileID: 8300000, guid: fdd85170821da1c409c6296ad8bcf9f0, type: 3}
