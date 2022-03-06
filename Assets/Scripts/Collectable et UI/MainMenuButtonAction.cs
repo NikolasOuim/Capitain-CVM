@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 public class MainMenuButtonAction : MonoBehaviour
 {
     public Button ButtonNiv2;
+    public Button ButtonNiv3;
+
     /// <summary>
     /// Permet d'afficher un panel transmis en paramètre
     /// </summary>
@@ -12,7 +14,17 @@ public class MainMenuButtonAction : MonoBehaviour
     public void AfficherPanel(GameObject PanelAOuvrir)
     {
         PanelAOuvrir.SetActive(true);
-        ButtonNiv2.interactable = true;
+        ///string level = GameManager.Instance.PlayerData.Niveau.ToString();
+        Debug.Log(GameManager.Instance.PlayerData.Niveau.ToString());
+        if (GameManager.Instance.PlayerData.Niveau >= 2)
+        {
+            ButtonNiv2.interactable = true;
+        }
+
+        if (GameManager.Instance.PlayerData.Niveau.Equals(3))
+        {
+            ButtonNiv3.interactable = true;
+        }
     }
 
     /// <summary>

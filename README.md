@@ -1,2 +1,6 @@
 # Capitain-CVM
-Projet de démonstration d'un platformer sous Unity 2019.4
+Travail technique de mi session. 
+
+Forked par Nikolas Ouimet
+
+

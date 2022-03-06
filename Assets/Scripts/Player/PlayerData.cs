@@ -185,7 +185,7 @@ public class PlayerData
     public void IncrNiveau(int niveau = 1)
     {
         this._niveau += niveau;
-        if (this._niveau >= MAX_NIVEAU)
+        if (this._niveau > MAX_NIVEAU)
         {
             this._niveau = MAX_NIVEAU;
         }
