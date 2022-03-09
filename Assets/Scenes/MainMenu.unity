@@ -1592,7 +1592,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &593140223
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4868,7 +4868,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1751471121
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5456,7 +5456,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Jeu cr\xE9e dans le cadre du cours 420-C63-VM \xE0 l'hiver 2022\n\nD\xE9veloppez
-    par Godefroy Borduas\n\nBas\xE9 sur le projet de UnityTutoFR"
+    par Godefroy Borduas\n\nBifurqu\xE9 par Nikolas Ouimet\n\nBas\xE9 sur le projet
+    de UnityTutoFR"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 16e3940f41aede64584bb555a76ea609, type: 2}
   m_sharedMaterial: {fileID: -8611522325959674043, guid: 16e3940f41aede64584bb555a76ea609,
