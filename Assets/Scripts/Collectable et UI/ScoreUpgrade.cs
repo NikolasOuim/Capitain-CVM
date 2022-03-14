@@ -8,7 +8,7 @@ public class ScoreUpgrade : MonoBehaviour
     /// Valeur de l'énergie regagner au contact
     /// </summary>
     [SerializeField]
-    private int _gainPoint = 3;
+    private int _gainPoint = 1;
     [SerializeField]
     private AudioClip _clip;
 

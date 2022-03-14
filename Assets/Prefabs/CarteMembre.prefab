@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4034574288078385870}
   - component: {fileID: 7880778714209923894}
   - component: {fileID: 3160592454567549955}
+  - component: {fileID: 7136312930718137883}
   m_Layer: 0
   m_Name: CarteMembre
   m_TagString: Untagged
@@ -221,3 +222,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7136312930718137883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2526090573675927414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43637e12db0f2ba4ab0aa1b644c96bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _carteMembre: 1
