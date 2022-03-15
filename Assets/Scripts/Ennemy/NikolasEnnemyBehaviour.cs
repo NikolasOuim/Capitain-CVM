@@ -15,15 +15,16 @@ public class NikolasEnnemyBehaviour : MonoBehaviour
     [SerializeField]
     private int _pointDestruction = 5;
     private bool _destructionEnCours = false;
-    public BoxCollider territory;
     GameObject player;
-    bool playerInTerritory;
+    public bool _playerEnTerritoire;
+
+    public bool PlayerEnTerritoire { get { return this._playerEnTerritoire; } }
 
     // Start is called before the first frame update
     void Start()
     {
         _animator = this.gameObject.GetComponent<Animator>();
-        playerInTerritory = false;
+        _playerEnTerritoire = false;
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -72,7 +73,7 @@ public class NikolasEnnemyBehaviour : MonoBehaviour
     {
         if (other.gameObject == player)
         {
-            playerInTerritory = true;
+            _playerEnTerritoire = true;
         }
     }
 
@@ -80,7 +81,7 @@ public class NikolasEnnemyBehaviour : MonoBehaviour
     {
         if (other.gameObject == player)
         {
-            playerInTerritory = false;
+            _playerEnTerritoire = false;
         }
     }
 }
