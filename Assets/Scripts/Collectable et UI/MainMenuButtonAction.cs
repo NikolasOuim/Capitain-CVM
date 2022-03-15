@@ -1,11 +1,16 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class MainMenuButtonAction : MonoBehaviour
 {
     public Button ButtonNiv2;
     public Button ButtonNiv3;
+    public TextMeshProUGUI TextChapeau;
+    public TextMeshProUGUI TextCarteMembre;
+    public TextMeshProUGUI TextConventionCollective;
+ 
 
     /// <summary>
     /// Permet d'afficher un panel transmis en paramètre
@@ -14,8 +19,6 @@ public class MainMenuButtonAction : MonoBehaviour
     public void AfficherPanel(GameObject PanelAOuvrir)
     {
         PanelAOuvrir.SetActive(true);
-        ///string level = GameManager.Instance.PlayerData.Niveau.ToString();
-        Debug.Log(GameManager.Instance.PlayerData.Niveau.ToString());
         if (GameManager.Instance.PlayerData.Niveau >= 2)
         {
             ButtonNiv2.interactable = true;
@@ -25,6 +28,10 @@ public class MainMenuButtonAction : MonoBehaviour
         {
             ButtonNiv3.interactable = true;
         }
+
+        TextChapeau.text = GameManager.Instance.PlayerData.Chapeau.ToString();
+        TextCarteMembre.text = GameManager.Instance.PlayerData.CarteMembre.ToString();
+        TextConventionCollective.text = GameManager.Instance.PlayerData.ConventionCollective.ToString();
     }
 
     /// <summary>

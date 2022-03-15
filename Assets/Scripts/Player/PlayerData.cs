@@ -33,6 +33,10 @@ public class PlayerData
     /// Représente le nombre de points de vie du personnage
     /// </summary>
     private int _vie;
+
+    private int _nbCarteMembre;
+
+    private int _nbConventionCollective;
     /// <summary>
     /// Représente le nombre d'énergie (entre 0 et 4)
     /// </summary>
@@ -78,6 +82,9 @@ public class PlayerData
 
     public int Energie { get { return this._energie; } }
     public int Vie { get { return this._vie; } }
+
+    public int ConventionCollective { get { return this._nbConventionCollective; } }
+    public int CarteMembre { get { return this._nbCarteMembre; } }
     public int Chapeau { get { return this._chapeau; } }
     public int Score { get { return this._score; } }
     public int Niveau { get { return this._niveau; } }
@@ -97,13 +104,15 @@ public class PlayerData
         this._chestOpenList = new List<string>();
         this._niveau = 1;
         this._chapeau = 0;
+        this._nbCarteMembre = 0;
+        this._nbConventionCollective = 0;
     }
 
     public PlayerData(int vie = 1, int energie = 2, int score = 0,
         float volumeGeneral = 0, float volumeMusique = 0, float volumeEffet = 0,
         System.Action uiPerteEnergie = null, System.Action uiPerteVie = null,
         System.Action gameOver = null, List<string> ChestList = null, int niveau = 1, 
-        int chapeau = 0)
+        int chapeau = 0, int nbConventionCollective = 0, int nbCarteMembre = 0)
     {
         this._vie = vie;
         this._energie = energie;
@@ -116,6 +125,8 @@ public class PlayerData
         this.UIPerteEnergie += uiPerteEnergie;
         this.UIPerteVie += uiPerteVie;
         this.Gameover += gameOver;
+        this._nbCarteMembre = nbCarteMembre;
+        this._nbConventionCollective = nbConventionCollective;
         this._chestOpenList = new List<string>();
         if (ChestList != null)
             this._chestOpenList = ChestList;
@@ -180,6 +191,16 @@ public class PlayerData
     public void AddChapeau(int quantite)
     {
         this._chapeau += quantite;
+    }
+
+    public void AddConventionCollective(int quantite)
+    {
+        this._nbConventionCollective += quantite;
+    }
+
+    public void AddCarteMembre(int quantite)
+    {
+        this._nbCarteMembre += quantite;
     }
 
     /// <summary>
