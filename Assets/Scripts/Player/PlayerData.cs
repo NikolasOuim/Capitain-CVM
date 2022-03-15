@@ -61,9 +61,9 @@ public class PlayerData
 
 
     /// <summary>
-    /// Représente le maximum de niveau
+    /// Représente le nombre de niveau plus le menu principal. 
     /// <summary>
-    public const int MAX_NIVEAU = 3;
+    public const int MAX_NIVEAU = 4;
 
     /// <summary>
     /// Permet d'identifier les actions sur le UI à réaliser

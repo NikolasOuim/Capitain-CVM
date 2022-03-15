@@ -72,8 +72,7 @@ public class NikolasEnnemyBehaviour : MonoBehaviour
             }
         }
     }
-
-    void OnTriggerExit(Collider2D collision)
+    void OnTriggerExit(UnityEngine.Collider collision)
     {
         if (collision.gameObject == player)
         {
