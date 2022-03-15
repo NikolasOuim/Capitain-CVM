@@ -26,18 +26,13 @@ public class NikolasEnnemy : MonoBehaviour
     private void Update()
     {
         Vector3 direction = _cible.position - this.transform.position;
-
-        if (nikolasEnnemyBehaviour.PlayerEnTerritoire == true)
+        if (direction.x < 0 && !_sr.flipX) _sr.flipX = true;
+        else if (direction.x > 0 && _sr.flipX) _sr.flipX = false;
+        if (nikolasEnnemyBehaviour.PlayerEnTerritoire.Equals(true))
         {
-            if (direction.x < 0 && !_sr.flipX) _sr.flipX = true;
-            else if (direction.x > 0 && _sr.flipX) _sr.flipX = false;
-
-            if (Vector3.Distance(this.transform.position, _cible.position) < _distanceSeuil)
-            {
-                _cible = player.transform;
-                transform.LookAt(_cible.position);
-                this.transform.Translate(direction.normalized * _vitesse * Time.deltaTime, Space.World);
-            }
+            
+            _cible = player.transform;
+            this.transform.Translate(direction.normalized * _vitesse * Time.deltaTime, Space.World);
         }
     }
 }

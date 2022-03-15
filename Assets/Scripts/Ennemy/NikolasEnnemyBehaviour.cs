@@ -59,6 +59,10 @@ public class NikolasEnnemyBehaviour : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Player"))
         {
+            if (collision.gameObject == player)
+            {
+                _playerEnTerritoire = true;
+            }
             if (!_invulnerable)
             {
                 this._pv--;
@@ -69,17 +73,9 @@ public class NikolasEnnemyBehaviour : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerExit(Collider2D collision)
     {
-        if (other.gameObject == player)
-        {
-            _playerEnTerritoire = true;
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject == player)
+        if (collision.gameObject == player)
         {
             _playerEnTerritoire = false;
         }
