@@ -46,6 +46,7 @@ public class PlayerData
     /// </summary>
     private int _score;
     private int _chapeau;
+    private int _moon;
     /// <summary>
     /// Le niveau où est rendu le joueur
     /// </summary>
@@ -88,6 +89,7 @@ public class PlayerData
     public int Chapeau { get { return this._chapeau; } }
     public int Score { get { return this._score; } }
     public int Niveau { get { return this._niveau; } }
+    public int Moon { get { return this._moon; } }
     public string[] ListeCoffreOuvert { get { return this._chestOpenList.ToArray(); } }
 
     public PlayerData()
@@ -104,6 +106,7 @@ public class PlayerData
         this._chestOpenList = new List<string>();
         this._niveau = 1;
         this._chapeau = 0;
+        this._moon = 0;
         this._nbCarteMembre = 0;
         this._nbConventionCollective = 0;
     }
@@ -112,7 +115,7 @@ public class PlayerData
         float volumeGeneral = 0, float volumeMusique = 0, float volumeEffet = 0,
         System.Action uiPerteEnergie = null, System.Action uiPerteVie = null,
         System.Action gameOver = null, List<string> ChestList = null, int niveau = 1, 
-        int chapeau = 0, int nbConventionCollective = 0, int nbCarteMembre = 0)
+        int chapeau = 0, int nbConventionCollective = 0, int nbCarteMembre = 0, int nbMoon = 0)
     {
         this._vie = vie;
         this._energie = energie;
@@ -126,6 +129,7 @@ public class PlayerData
         this.UIPerteVie += uiPerteVie;
         this.Gameover += gameOver;
         this._nbCarteMembre = nbCarteMembre;
+        this._moon = nbMoon;
         this._nbConventionCollective = nbConventionCollective;
         this._chestOpenList = new List<string>();
         if (ChestList != null)
@@ -191,6 +195,11 @@ public class PlayerData
     public void AddChapeau(int quantite)
     {
         this._chapeau += quantite;
+    }
+
+    public void AddMoon(int quantite)
+    {
+        this._moon += quantite;
     }
 
     public void AddConventionCollective(int quantite)

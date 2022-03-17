@@ -10,6 +10,7 @@ public class MainMenuButtonAction : MonoBehaviour
     public TextMeshProUGUI TextChapeau;
     public TextMeshProUGUI TextCarteMembre;
     public TextMeshProUGUI TextConventionCollective;
+    public TextMeshProUGUI TextMoon;
  
 
     /// <summary>
@@ -32,6 +33,7 @@ public class MainMenuButtonAction : MonoBehaviour
         TextChapeau.text = GameManager.Instance.PlayerData.Chapeau.ToString();
         TextCarteMembre.text = GameManager.Instance.PlayerData.CarteMembre.ToString();
         TextConventionCollective.text = GameManager.Instance.PlayerData.ConventionCollective.ToString();
+        TextMoon.text = GameManager.Instance.PlayerData.Moon.ToString();
     }
 
     /// <summary>
