@@ -7,7 +7,6 @@ public class FinDeNiveau : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Félicitation, le niveau est terminé.");
             GameManager.Instance.SaveData();
             GameManager.Instance.PlayerData.IncrNiveau();
             
